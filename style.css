@@ -1,0 +1,163 @@
+body, html{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	width:100%;
+	height:90%;
+}
+
+body{
+	background-color: rgba(50,50,50,1);
+	overflow-x: hidden;
+	width:100%;
+	background-image: url("light_noise_diagonal.png");
+}
+
+/* PAGE */
+#shield{
+	position: fixed;
+	top:0px;
+	background-image: url("background_darker.jpg");
+	background-size: cover;
+	background-repeat: no-repeat; 
+
+	width: 100%;
+	height: 90%;
+	
+	/*margin-top:70px;*/
+	padding: 0px; 
+	border: 0px;
+	
+	text-align: center;
+	vertical-align:middle;
+	
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	
+	font-family: 'Ubuntu', sans-serif;
+	color: #FFF;
+	-webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+#shield #shield_text h1{
+	font-size: 50px;
+}
+#shield #shield_text h3{
+	font-size: 30px;
+}
+
+#logo{
+	width: 200px;
+	height: 200px;
+}
+
+.sound{
+	transition: all 0.5s;
+	cursor: pointer;
+	
+	/*can't select*/
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.sound:hover{
+	-ms-transform: scale(1.1,1.1); /* IE 9 */
+    -webkit-transform: scale(1.1,1.1);  /* Safari */
+    transform: scale(1.1,1.1); 
+}
+.sound:active{
+	-ms-transform: scale(1.05,1.05); /* IE 9 */
+    -webkit-transform: scale(1.05,1.05);  /* Safari */
+    transform: scale(1.05,1.05); 
+}
+
+@media screen and (min-width:680px) and (max-width:1025px){
+	#page_header{
+		height: 150px;
+		padding: 0px;
+	}
+	#page_header #page_title{
+		font-size: 55px;
+		margin-top: 30px;
+	}
+	#shield{
+		/*background-image: url("header_image_small.png");*/
+		height: 55%;
+		width: 100%;
+		/*margin-top:148px;*/
+		top:70px;
+	}
+	#shield #shield_text h1{
+		font-size: 38px;
+	}
+	#shield #shield_text h3{
+		font-size: 18px;
+	}
+	
+	.zone{
+		padding: 32px;
+		height: 190px;
+	}
+	.zone .title{
+		font-size: 50px;
+		line-height: 50px;
+		margin: 20px;
+	}
+	.zone .content{
+		font-size: 32px;
+		padding: 10px;
+	}
+	.zone .ip{
+		font-size: 40px; 
+	}
+}
+
+@media screen and (max-width:680px){
+	#page_header{
+		height: 70px;
+		padding: 0px;
+	}
+	#page_header #page_title{
+		font-size: 35px;
+		margin-top: 10px;
+	}
+	#shield{
+		/*background-image: url("header_image_small.png");*/
+		/*background-size: contain;*/
+		height: 50%;
+	}
+	#shield #shield_text h1{
+		font-size: 22px;
+	}
+	#shield #shield_text h3{
+		font-size: 16px;
+	}
+	
+	.zone{
+		padding: 32px;
+		height: 220px;
+	}
+	.zone .title{
+		font-size: 50px;
+		margin: 20px;
+		line-height: 50px;
+	}
+	.zone .content{
+		font-size: 32px;
+		padding: 10px;
+	}
+	.zone .ip{
+		font-size: 40px; 
+	}
+}
+
+/* PAGE */
+
+h1{
+	padding: 0px;
+	margin: 0px;
+}

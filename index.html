@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Portifolio Lucas Carvalhaes</title>
+		
+		<!-- Site icons and style -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.png" type="image/png">
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="extra_styles.css">
+		<link rel="stylesheet" type="text/css" href="zone.css">
+		
+		<!-- Easter Egg -->
+		<audio id="oneup" src="http://themushroomkingdom.net/sounds/wav/smw/smw_coin.wav"></audio>
+		
+		<!-- External scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="jquery.nicescroll.js"></script>
+		
+		<!-- Coin feature -->
+		<script src="under.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!-- Internal scripts -->
+		<script>
+			
+			// Mobile plataforms already have nice scrolling
+			$( document ).ready(function() {
+				if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+					$("html").niceScroll();
+				}
+				
+				//Enable coins
+				initCoins();
+			});
+
+			// Too heavy for mobile
+			if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+				$(window).scroll(function(){
+					var fromtop = $(document).scrollTop();// pixels from top of screen
+					$('#shield').css('opacity', (800-fromtop)/600);
+				});
+			}
+			
+		</script>
+	</head>
+
+	<body>
+		
+		<!-- Shield image and flavour text -->
+		<div id="shield">
+			<div id="shield_text">
+				<img id="logo" src="Coin.png"/>
+				<div class="sound"><h1 id="main-title">Lucas Montenegro Carvalhaes</h1></div>
+				<h3>Java, Café e muita coisa complicada</h3>
+			</div>
+		</div>
+		
+		<!-- Page content -->
+		<div id="content">
+		
+			<div class="zone light">
+				<h2 class="title">Quem sou eu?</h2>
+				<p class="content">Lucas Montenegro Carvalhaes, mais conhecido como zombie ou javaman. </p>
+				<p class="content">Estudande de graduação em Ciência da Computação na Universidade Federal de São Carlos e desenvolvedor java aficionado.</p>
+				<p class="content">Gamer com grande interesse em trabalhar na área de mídias interativas e jogos digitais.</p>
+				<p class="content">Algumas de minhas habilidades:</p>
+				<a title="Android" class="tooltip"><img class="mini-logo" src="logos/android.png" /></a>
+				<a title="Antlr" class="tooltip"><img class="mini-logo" src="logos/antlr.png" /></a>
+				<a title="CSS 3" class="tooltip"><img class="mini-logo" src="logos/css.png" /></a>
+				<a title="HTML 5" class="tooltip"><img class="mini-logo" src="logos/html.png" /></a>
+				<a title="Java" class="tooltip"><img class="mini-logo" src="logos/java.png" /></a>
+				<a title="LibGDX" class="tooltip"><img class="mini-logo" src="logos/libgdx.png" /></a>
+				<a title="Lua" class="tooltip"><img class="mini-logo" src="logos/lua.png" /></a>
+				<a title="Mysql/SQL" class="tooltip"><img class="mini-logo" src="logos/mysql.png" /></a>
+				<a title="Tomcat" class="tooltip"><img class="mini-logo" src="logos/tomcat.png" /></a>
+			</div>
+			
+			<div class="zone dark">
+				<h2 class="title">Código</h2>
+				<p class="content">Conheça meu jeito de programar! Tenho projetos abertos no GitHub e no BitBucket.</p>
+				<a href="https://github.com/lucasmontec" target="_blank"> <img class="space" src="logos/Github.png" width="60px" height="60px"/> </a>
+				<a href="https://bitbucket.org/lucasmontec" target="_blank"> <img class="space" src="logos/Bitbucket.png" width="60px" height="60px"/> </a>
+			</div>
+			
+			<div class="zone light">
+				<h2 class="title">Projetos</h2>
+				<table class="centered-table">
+					<tr>
+						<td>
+							<a href="https://github.com/lucasmontec/NSI-Graph" target="_blank">
+								<img src="nsigraph.png" class="mini-logo"/>
+							</a>
+						</td>
+						<td>
+							<p class="table-content">NSIGraph, Um editor de grafos educativo: </p>
+						</td>
+						<td>
+							<a href="http://www.mediafire.com/download/8mw5no9tnv8m8qu/NSIGraph_29-08-2013.rar" target="_blank" class="action-button animate green">Download</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="https://github.com/lucasmontec/Stackboard" target="_blank">
+								<img src="stackboard.png" class="mini-logo"/>
+							</a>
+						</td>
+						<td>
+							<p class="table-content">Stackboard, Uma clipboard inteligente: </p>
+						</td>
+						<td>
+							<a href="http://www.mediafire.com/download/pqirh7b3lbbo7ot/Stackboard_alpha.jar" target="_blank" class="action-button animate green">Download</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="http://zumbi.co.nf/cards/showCards.php" target="_blank">
+								<img src="thoughcards.png" class="mini-logo"/>
+							</a>
+						</td>
+						<td>
+							<p class="table-content">Though Cards, um site de cartões interativos: </p>
+						</td>
+						<td>
+							<a href="http://zumbi.co.nf/cards/showCards.php" target="_blank" class="action-button animate green">Go there</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div class="zone dark" align="center">
+				<h2 class="title">Contato</h2>
+				<p class="content">lucas_carvalhaes@hotmail.com</p>
+				<p class="content">lucas.mcarvalhaes@gmail.com</p>
+			</div>
+			
+			<!-- <div class="zone light" align="center">
+				<h2 class="title">Gato</h2>
+				<img src="cat1.jpg" alt="cato"/>
+			</div> -->
+			
+		</div>
+			
+	</body>
+
+</html>
